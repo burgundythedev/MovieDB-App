@@ -1,0 +1,20 @@
+.movie-list {
+  background-color: #64c5b5;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 40px;
+  text-align: center;
+  padding: 0%;
+
+  @media all and (max-width: 1280px) {
+    grid-template-columns: repeat(3, 1fr);
+    padding-left: 0px;
+  }
+
+  @media all and (max-width: 830px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media all and (max-width: 600px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

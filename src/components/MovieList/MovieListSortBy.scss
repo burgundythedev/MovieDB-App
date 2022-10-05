@@ -1,0 +1,10 @@
+.sort-filter-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 50px;
+  @media all and (max-width: 830px) {
+    display: flex;
+    flex-direction: column;
+  }
+}
