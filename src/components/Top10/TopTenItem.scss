@@ -6,24 +6,27 @@
   flex-direction: column;
   align-items: center;
   list-style-type: none;
-  border-top: 3px solid white;
-
-  & h1 {
-    font-size: 20px;
-    font-family: "Inconsolata", monospace;
-    color: white;
-  }
+  border-top: 1px solid red;
+  border-bottom: 1px solid red;
+  padding: 15px;
 
   & img {
-    width: 250px;
-    margin: auto;
-    border-radius: 10px;
+    width: 200px;
+    border-radius: 15%;
   }
 
-  & h2 {
-    font-size: 25px;
-    width: 30px;
-    color: white;
-    font-family: "Inconsolata", monospace;
+  & .rate {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+
+    & h2 {
+      font-size: 17px;
+      width: 30px;
+      color: white;
+      text-decoration: overline red;
+      font-family: "Inconsolata", monospace;
+    }
   }
 }

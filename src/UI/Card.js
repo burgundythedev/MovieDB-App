@@ -1,12 +1,10 @@
 import React from "react";
-import "./Button.scss";
+import "./Card.scss";
 
 const Button = (props) => {
   return (
     <React.Fragment>
-      <button onClick={props.onClick} className="button">
-        Details
-      </button>
+      <div className="card-component">{props.children}</div>
     </React.Fragment>
   );
 };

@@ -11,9 +11,6 @@ const Header = () => {
       <div className="navigation-bar">
         <ul>
           <li>
-            <a href="">TOP 10</a>
-          </li>
-          <li>
             <a href="">Movies</a>
           </li>
           <li>

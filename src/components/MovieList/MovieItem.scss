@@ -2,23 +2,21 @@ $fontfamily: "Roboto Slab", serif;
 
 .movie-item {
   list-style-type: none;
-  & h1 {
-    font-size: 17px;
-    font-family: $fontfamily;
+  border-radius: 10%;
+  border: 1px solid re;
+
+  &:hover {
+    box-shadow: 1px 1px 5px black;
   }
 
   & h3 {
-    font-size: 13px;
+    font-size: 15px;
+    color: red;
+    text-decoration: overline white;
     font-family: $fontfamily;
-    
-    text-decoration:  overline white;
   }
 
   & img {
     width: 225px;
-    border-radius: 10px;
-    &:hover {
-      box-shadow: 2px 2px 20px black;
-    }
   }
 }

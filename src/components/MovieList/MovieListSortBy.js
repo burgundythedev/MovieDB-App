@@ -4,23 +4,52 @@ import DropDownSortList from "./DropDownSortList";
 import DropDownFilterList from "./DropDownFilterList";
 import "./MovieListSortBy.scss";
 import MovieList from "./MovieList";
+import ModalOverlay from "../../UI/ModalOverlay";
+import ModalItem from "../ModalItem/ModalItem";
 
-const MovieListSortBy = () => {
+const MovieListSortBy = (props) => {
   const [movieList, setMovieList] = useState([]);
   const [infiniteItem, setInfiniteItem] = useState(1);
   const [selectSortFilter, setSelectSortFilter] = useState();
+  const [modalMovieId, setModalMovieId] = useState();
+  const [modalDisplay, setModalDisplay] = useState(false);
+  const [showMovieList, setShowMovieList] = useState(true);
+  const showListHandler = () => {
+    setShowMovieList(false);
+  };
+  const hideListHandler = () => {
+    setShowMovieList(true);
+  };
+  const showModalHandler = (id) => {
+    setModalMovieId(id);
+    setModalDisplay(true);
+  };
+  const hideModalHandler = () => {
+    setModalDisplay(false);
+  };
+
+  useEffect(() => {
+    fetch(
+      `https://api.themoviedb.org/3/movie/popular?api_key=9e6097a7454dac67a03753fbec2f1c4f&language=en-US&page=${infiniteItem}`
+    )
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        setMovieList((prev) => [...prev, ...data.results]);
+      });
+  }, [infiniteItem]);
 
   const sortFilterSelected = (filterOptions) => {
     setSelectSortFilter(filterOptions);
-    // console.log(sortChoice);
-    const findIdGenre = movieList.find(
-      (elementById) => elementById.genre_ids[0]
+    const filteredMovieList = movieList.filter(
+      (movie) => movie.genre_ids[0] === filterOptions.id
     );
-    console.log(findIdGenre);
+    setMovieList(filteredMovieList);
   };
+
   const sortValueSelected = (sortOptions) => {
     setSelectSortFilter(sortOptions);
-    console.log(sortOptions);
     const sortedMovieList = movieList.sort((a, b) => {
       if (sortOptions === "a-z") {
         return a.title.localeCompare(b.title);
@@ -39,23 +68,9 @@ const MovieListSortBy = () => {
     setMovieList(sortedMovieList);
   };
 
-  useEffect(() => {
-    fetch(
-      `https://api.themoviedb.org/3/movie/popular?api_key=9e6097a7454dac67a03753fbec2f1c4f&language=en-US&page=${infiniteItem}`
-    )
-      .then((response) => {
-        return response.json();
-      })
-      .then((data) => {
-        setMovieList((prev) => [...prev, ...data.results]);
-      });
-  }, [infiniteItem]);
+  // regler le link fetch .env
 
   const handleScroll = () => {
-    // console.log("Height:", document.documentElement.scrollHeight);
-    // console.log("Top:", document.documentElement.scrollTop);
-    // console.log("Window:", window.innerHeight);
-
     if (
       window.innerHeight + document.documentElement.scrollTop + 1 >=
       document.documentElement.scrollHeight
@@ -71,11 +86,28 @@ const MovieListSortBy = () => {
   console.log(movieList);
   return (
     <WrapperMovieList>
+      {modalDisplay && (
+        <ModalOverlay onClose={hideModalHandler}>
+          <ModalItem
+            id={modalMovieId}
+            movieData={movieList}
+            onClose={hideModalHandler}
+          />
+        </ModalOverlay>
+      )}
       <div className="sort-filter-list">
+        <button className="button-list" onClick={showListHandler}>
+          Movie List
+        </button>
+        <button className="button-list" onClick={hideListHandler}>
+          Hide List
+        </button>
         <DropDownSortList sortValue={sortValueSelected} />
         <DropDownFilterList filterValue={sortFilterSelected} />
       </div>
-      <MovieList movieList={movieList} />
+      {!showMovieList && (
+        <MovieList movieList={movieList} onShowModal={showModalHandler} />
+      )}
     </WrapperMovieList>
   );
 };

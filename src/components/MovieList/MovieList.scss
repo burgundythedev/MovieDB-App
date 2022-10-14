@@ -1,10 +1,11 @@
 .movie-list {
-  background-color: #64c5b5;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   grid-gap: 40px;
   text-align: center;
   padding: 0%;
+  margin: 150px 25px 0px 25px;
+
 
   @media all and (max-width: 1280px) {
     grid-template-columns: repeat(3, 1fr);
@@ -14,6 +15,7 @@
   @media all and (max-width: 830px) {
     grid-template-columns: repeat(2, 1fr);
   }
+
   @media all and (max-width: 600px) {
     grid-template-columns: repeat(1, 1fr);
   }

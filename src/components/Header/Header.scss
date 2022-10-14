@@ -5,8 +5,8 @@ $fontcolor: #64c5b5;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  border-bottom: 3px solid white;
-  background-color: #042444;
+  background-color: black;
+  
 
   @media only screen and (max-width: 600px) {
     display: flex;
@@ -31,7 +31,7 @@ $fontcolor: #64c5b5;
   ul {
     display: flex;
     flex-direction: row;
-    margin-top: 20px;
+    color: white;
 
     @media only screen and (max-width: 600px) {
       padding: 0px;
@@ -43,8 +43,7 @@ $fontcolor: #64c5b5;
       padding-right: 40px;
       font-family: "Fjalla One", "sans-serif";
       font-weight: bolder;
-      font-size: 30px;
-      color: $fontcolor;
+      font-size: 40px;
       @media only screen and (max-width: 600px) {
         font-size: 20px;
       }
@@ -56,11 +55,11 @@ $fontcolor: #64c5b5;
         }
 
         &:visited {
-          color: $fontcolor;
+          color: white;
         }
 
         &:hover {
-          color: $fontcolor;
+          color: white;
         }
       }
     }

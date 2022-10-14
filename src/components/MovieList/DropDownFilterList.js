@@ -1,9 +1,14 @@
 import React from "react";
+import { genresMap } from "../../UI/exportConst";
 import "./DropDownSortList.scss";
 
 const DropDownSortList = (props) => {
   const handlerFilterValue = (event) => {
-    props.filterValue(event.target.value);
+    const genreId = genresMap[event.target.value];
+    if (!genreId) {
+      return;
+    }
+    props.filterValue(genreId);
   };
   return (
     <div className="dropdown">
@@ -11,10 +16,10 @@ const DropDownSortList = (props) => {
       <select name="movie" className="movie" onChange={handlerFilterValue}>
         <optgroup label="Genre">
           <option value="choose">Choose</option>
-          <option value="comedy">Comedy</option>
-          <option value="action">Action</option>
-          <option value="thriller">Thriller</option>
-          <option value="">Horror</option>
+          <option value="Comedy">Comedy</option>
+          <option value="Action">Action</option>
+          <option value="Thriller">Thriller</option>
+          <option value="Horror">Horror</option>
         </optgroup>
       </select>
     </div>

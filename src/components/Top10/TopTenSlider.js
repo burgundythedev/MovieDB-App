@@ -22,7 +22,6 @@ const TopTenSlider = () => {
   }, []);
   return (
     <div className="card">
-      <h1 className="theme">Top Ten Rated Movies</h1>
       <TopTenList topMovies={movies} />
     </div>
   );
