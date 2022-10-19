@@ -7,7 +7,7 @@ const DropDownSortList = (props) => {
   };
   return (
     <div className="dropdown">
-      <label htmlFor="movie">Sort By:</label>
+      <label htmlFor="movie">&nbsp;&nbsp;Sort By:</label>
       <select name="movie" className="movie" onChange={handlerFilterValue}>
         <optgroup label="Alphetical Order">
           <option value="choose">Choose</option>

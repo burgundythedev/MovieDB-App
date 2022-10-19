@@ -2,8 +2,9 @@ $fontfamily: "Roboto Slab", serif;
 
 .movie-item {
   list-style-type: none;
-  border-radius: 10%;
-  border: 1px solid re;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   &:hover {
     box-shadow: 1px 1px 5px black;

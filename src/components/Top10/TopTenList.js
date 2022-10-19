@@ -8,7 +8,9 @@ import { settings } from "../../UI/exportConst";
 const ToptenList = (props) => {
   return (
     <div className="slider">
-      <h1 className="theme">Top Ten Rated Movies</h1>
+      <h1 className="theme" id="top-ten">
+        Top Ten Rated Movies
+      </h1>
       <Slider {...settings}>
         {props.topMovies.slice(0, 10).map((item, index) => {
           return (

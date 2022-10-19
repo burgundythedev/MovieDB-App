@@ -4,12 +4,6 @@ export const BASE_URL_T10M =
 export const REACT_APP_MOVIE_API_KEY = "9e6097a7454dac67a03753fbec2f1c4f";
 // export const REACT_URL_MOVIELIST =`https://api.themoviedb.org/3/movie/popular?api_key=9e6097a7454dac67a03753fbec2f1c4f&language=en-US&page=${infiniteItem}`
 
-// export const genresMap = [
-//   { id: "28", name: "Action" },
-//   { id: "35", name: "Comedy" },
-//   { id: "27", name: "Horror" },
-//   { id: "58", name: "Thriller" },
-// ];
 export const genresMap = {
   Action: "28",
   Comedy: "35",

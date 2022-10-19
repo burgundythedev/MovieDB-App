@@ -13,13 +13,7 @@ const MovieListSortBy = (props) => {
   const [selectSortFilter, setSelectSortFilter] = useState();
   const [modalMovieId, setModalMovieId] = useState();
   const [modalDisplay, setModalDisplay] = useState(false);
-  const [showMovieList, setShowMovieList] = useState(true);
-  const showListHandler = () => {
-    setShowMovieList(false);
-  };
-  const hideListHandler = () => {
-    setShowMovieList(true);
-  };
+
   const showModalHandler = (id) => {
     setModalMovieId(id);
     setModalDisplay(true);
@@ -96,18 +90,10 @@ const MovieListSortBy = (props) => {
         </ModalOverlay>
       )}
       <div className="sort-filter-list">
-        <button className="button-list" onClick={showListHandler}>
-          Movie List
-        </button>
-        <button className="button-list" onClick={hideListHandler}>
-          Hide List
-        </button>
         <DropDownSortList sortValue={sortValueSelected} />
         <DropDownFilterList filterValue={sortFilterSelected} />
       </div>
-      {!showMovieList && (
-        <MovieList movieList={movieList} onShowModal={showModalHandler} />
-      )}
+      <MovieList movieList={movieList} onShowModal={showModalHandler} />
     </WrapperMovieList>
   );
 };

@@ -1,35 +1,62 @@
 $fontfamily: "Roboto Slab", serif;
 
-body {
-	font-family: 'Roboto', sans-serif;
-}
 .modal-item {
   display: flex;
   flex-direction: column;
+  text-align: center;
   align-items: center;
   background-image: url("https://i.pinimg.com/736x/5f/11/77/5f1177f056c60fd581839d98e9b8b08d.jpg");
   background-size: 100% 100%;
 
   & h1 {
-    font-size: 30px;
+    font-size: 27px;
     font-family: 'Alfa Slab One', cursive;
+
+    @media all and (max-width: 830px) {
+      font-size: 20px;
+    }
+
+    @media all and (max-width: 630px) {
+      font-size: 10px;
+    }
   }
 
   & h2 {
     font-size: 20px;
     font-family: 'Silkscreen', cursive;
+
+    @media all and (max-width: 830px) {
+      font-size: 15px;
+    }
   }
 
   & h3 {
-    width: 50%;
-    font-size: 15px;
+    width: 60%;
+    font-size: 13px;
     font-family: $fontfamily;
     text-align: justify;
+
+    @media all and (max-width: 830px) {
+      font-size: 10px;
+    }
+
+    @media all and (max-width: 630px) {
+      text-align: start;
+      font-size: 10px;
+    }
   }
 
   & img {
-    width: 200px;
+    width: 150px;
     border-radius: 10px;
+
+    @media all and (max-width: 830px) {
+      width: 120px;
+    }
+
+    @media all and (max-width: 630px) {
+      width: 100px;
+    }
   }
 
   & .modal-button {
@@ -82,4 +109,5 @@ body {
     background: rgba(0, 0, 0, 0.08);
     color: rgba(0, 0, 0, 0.3);
   }
+
 }
