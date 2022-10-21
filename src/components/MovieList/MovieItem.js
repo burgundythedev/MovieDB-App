@@ -5,10 +5,11 @@ import Button from "../../UI/Button";
 
 const MovieItem = (props) => {
   return (
-    <li className="movie-item">
+    <li className="movie-item" onClick={props.onDisplay}>
       <h3>{props.releaseDate}</h3>
       <img src={BASE_IMG_URL + props.image} alt="poster-movie" />
-      <Button onClick={props.onDisplay} />
+      <h3>{props.genre}</h3>
+      <Button />
     </li>
   );
 };

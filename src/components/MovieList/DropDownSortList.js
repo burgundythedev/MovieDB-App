@@ -2,13 +2,14 @@ import React from "react";
 import "./DropDownSortList.scss";
 
 const DropDownSortList = (props) => {
-  const handlerFilterValue = (event) => {
+  const handlerSortValue = (event) => {
     props.sortValue(event.target.value);
   };
+
   return (
     <div className="dropdown">
       <label htmlFor="movie">&nbsp;&nbsp;Sort By:</label>
-      <select name="movie" className="movie" onChange={handlerFilterValue}>
+      <select name="movie" className="movie" onChange={handlerSortValue}>
         <optgroup label="Alphetical Order">
           <option value="choose">Choose</option>
           <option value="a-z">A to Z</option>

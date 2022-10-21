@@ -5,10 +5,10 @@ export const REACT_APP_MOVIE_API_KEY = "9e6097a7454dac67a03753fbec2f1c4f";
 // export const REACT_URL_MOVIELIST =`https://api.themoviedb.org/3/movie/popular?api_key=9e6097a7454dac67a03753fbec2f1c4f&language=en-US&page=${infiniteItem}`
 
 export const genresMap = {
-  Action: "28",
-  Comedy: "35",
-  Horror: "27",
-  Thriller: "58",
+  Action: 28,
+  Comedy: 35,
+  Horror: 27,
+  Thriller: 58,
 };
 export const settings = {
   dots: false,

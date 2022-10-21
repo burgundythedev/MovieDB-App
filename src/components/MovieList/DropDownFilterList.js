@@ -2,7 +2,7 @@ import React from "react";
 import { genresMap } from "../../UI/exportConst";
 import "./DropDownFilterList.scss";
 
-const DropDownSortList = (props) => {
+const DropDownFilterList = (props) => {
   const handlerFilterValue = (event) => {
     const genreId = genresMap[event.target.value];
     if (!genreId) {
@@ -25,4 +25,4 @@ const DropDownSortList = (props) => {
     </div>
   );
 };
-export default DropDownSortList;
+export default DropDownFilterList;

@@ -36,10 +36,18 @@ const MovieListSortBy = (props) => {
 
   const sortFilterSelected = (filterOptions) => {
     setSelectSortFilter(filterOptions);
+
     const filteredMovieList = movieList.filter(
-      (movie) => movie.genre_ids[0] === filterOptions.id
+      // (movie) => filterOptions.id === movie.genre_ids[0]
+      (movie) =>
+        movie.genre_ids.reduce(
+          (acc, curr) => acc || curr === filterOptions.id,
+          false
+        )
     );
+    //prevState ? //Index nesting ?
     setMovieList(filteredMovieList);
+    console.log({ filteredMovieList, movieList });
   };
 
   const sortValueSelected = (sortOptions) => {
@@ -62,8 +70,6 @@ const MovieListSortBy = (props) => {
     setMovieList(sortedMovieList);
   };
 
-  // regler le link fetch .env
-
   const handleScroll = () => {
     if (
       window.innerHeight + document.documentElement.scrollTop + 1 >=
@@ -77,7 +83,6 @@ const MovieListSortBy = (props) => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-  console.log(movieList);
   return (
     <WrapperMovieList>
       {modalDisplay && (
