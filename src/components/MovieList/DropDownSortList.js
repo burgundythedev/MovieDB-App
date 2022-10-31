@@ -7,9 +7,13 @@ const DropDownSortList = (props) => {
   };
 
   return (
-    <div className="dropdown">
+    <div className="dropdown" id="movie">
       <label htmlFor="movie">&nbsp;&nbsp;Sort By:</label>
-      <select name="movie" className="movie" onChange={handlerSortValue}>
+      <select
+        className="movie"
+        value={props.selected}
+        onChange={handlerSortValue}
+      >
         <optgroup label="Alphetical Order">
           <option value="choose">Choose</option>
           <option value="a-z">A to Z</option>

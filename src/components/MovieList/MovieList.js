@@ -12,7 +12,6 @@ const MovieList = (props) => {
             title={movie.title}
             image={movie.poster_path}
             releaseDate={movie.release_date}
-            genre={JSON.stringify(movie.genre_ids)}
             description={movie.overview}
             onDisplay={() => props.onShowModal(movie.id)}
             onClick={props.onHide}

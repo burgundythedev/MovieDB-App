@@ -12,7 +12,6 @@ const TopTenSlider = () => {
         return response.json();
       })
       .then((data) => {
-        // console.log(data.results);
         setMovies(data.results);
       });
   };
