@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/moviedb/static/css/main.367281d4.css",
-    "main.js": "/moviedb/static/js/main.10e3fe42.js",
-    "static/media/TMDBlogo.png": "/moviedb/static/media/TMDBlogo.0d9c5ecf776736d5c7df.png",
-    "static/media/slick.svg": "/moviedb/static/media/slick.2630a3e3eab21c607e21.svg",
-    "static/media/slick.eot": "/moviedb/static/media/slick.a4e97f5a2a64f0ab1323.eot",
-    "static/media/slick.ttf": "/moviedb/static/media/slick.c94f7671dcc99dce43e2.ttf",
-    "index.html": "/moviedb/index.html",
-    "static/media/slick.woff": "/moviedb/static/media/slick.295183786cd8a1389865.woff",
-    "main.367281d4.css.map": "/moviedb/static/css/main.367281d4.css.map",
-    "main.10e3fe42.js.map": "/moviedb/static/js/main.10e3fe42.js.map"
+    "main.css": "/MovieDB-App/static/css/main.41802b51.css",
+    "main.js": "/MovieDB-App/static/js/main.40ede618.js",
+    "static/media/TMDBlogo.png": "/MovieDB-App/static/media/TMDBlogo.0d9c5ecf776736d5c7df.png",
+    "static/media/slick.svg": "/MovieDB-App/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/MovieDB-App/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "index.html": "/MovieDB-App/index.html",
+    "static/media/slick.ttf": "/MovieDB-App/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/MovieDB-App/static/media/slick.295183786cd8a1389865.woff",
+    "main.41802b51.css.map": "/MovieDB-App/static/css/main.41802b51.css.map",
+    "main.40ede618.js.map": "/MovieDB-App/static/js/main.40ede618.js.map"
   },
   "entrypoints": [
-    "static/css/main.367281d4.css",
-    "static/js/main.10e3fe42.js"
+    "static/css/main.41802b51.css",
+    "static/js/main.40ede618.js"
   ]
 }
